@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>העיר לא נמצאה</title>
+</head>
+<body>
+    <h1>העיר לא נמצאה בטבלת הוצאות רכב</h1>
+    <p>העיר <span id="cityName"></span> לא נמצאה בטבלת הוצאות רכב. נא להוסיף אותה ולעדכן שוב את הרשומה במשימות בשטח.</p>
+
+    <script>
+        // קבלת שם העיר מה-URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const cityName = urlParams.get('city');
+        document.getElementById('cityName').textContent = cityName;
+    </script>
+</body>
+</html>
